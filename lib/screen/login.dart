@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:todo_list_app/colors/colors.dart';
 
 class LoginScreen extends StatefulWidget{
@@ -27,7 +26,12 @@ class Login_ScreenState extends State<LoginScreen>{
                 borderRadius: BorderRadius.circular(15),
 
               ),
-              child: const TextField(),
+              child: const TextField(
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black,
+                ),
+              ),
             )
             
             // const Padding(
@@ -51,13 +55,13 @@ class Login_ScreenState extends State<LoginScreen>{
 
   Padding image(){
       return Padding(
-              padding:const EdgeInsets.symmetric(horizontal: 15),
+              padding:const EdgeInsets.symmetric(horizontal: 0),
             child:Container(
               width:double.infinity,
               height:300,
               decoration:const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('images/login.jpeg'),
+                  image: AssetImage('lib/images/login.jpeg'),
                 fit: BoxFit.cover,
                 ),
               ) ,
